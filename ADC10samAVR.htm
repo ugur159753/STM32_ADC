@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\ADC10samAVR.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\ADC10samAVR.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5.03 [Build 76]: Last Updated: Tue Aug 07 08:37:52 2018
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5.03 [Build 76]: Last Updated: Fri Dec 07 15:50:42 2018
 <BR><P>
 <H3>Maximum Stack Usage =         44 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -601,16 +601,7 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__user_setup_stackheap
 </UL>
 
-<P><STRONG><a name="[5e]"></a>SystemInit</STRONG> (Thumb, 88 bytes, Stack size 8 bytes, system_stm32f4xx.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = SystemInit &rArr; SetSysClock
-</UL>
-<BR>[Calls]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetSysClock
-</UL>
-<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f40_41xxx.o(.text)
-</UL>
-<P><STRONG><a name="[9d]"></a>SystemCoreClockUpdate</STRONG> (Thumb, 174 bytes, Stack size 16 bytes, system_stm32f4xx.o(.text), UNUSED)
-
-<P><STRONG><a name="[79]"></a>getAverage</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, userfunctions.o(.text))
+<P><STRONG><a name="[78]"></a>getAverage</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, userfunctions.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = getAverage
 </UL>
 <BR>[Called By]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sensorFilterRoutine
@@ -620,23 +611,32 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[78]"></a>ADC_ConvertSampleTime</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, userfunctions.o(.text))
+<P><STRONG><a name="[77]"></a>ADC_ConvertSampleTime</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, userfunctions.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sensorFilterRoutine
 </UL>
 
-<P><STRONG><a name="[7a]"></a>valueComparator</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, userfunctions.o(.text))
+<P><STRONG><a name="[79]"></a>valueComparator</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, userfunctions.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sensorFilterRoutine
 </UL>
 
 <P><STRONG><a name="[74]"></a>sensorFilterRoutine</STRONG> (Thumb, 94 bytes, Stack size 28 bytes, userfunctions.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = sensorFilterRoutine &rArr; getAverage
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;valueComparator
-<LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_ConvertSampleTime
-<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getAverage
+<BR>[Calls]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;valueComparator
+<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_ConvertSampleTime
+<LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getAverage
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_IRQHandler
 </UL>
+
+<P><STRONG><a name="[5e]"></a>SystemInit</STRONG> (Thumb, 88 bytes, Stack size 8 bytes, system_stm32f4xx.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = SystemInit &rArr; SetSysClock
+</UL>
+<BR>[Calls]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetSysClock
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f40_41xxx.o(.text)
+</UL>
+<P><STRONG><a name="[9d]"></a>SystemCoreClockUpdate</STRONG> (Thumb, 174 bytes, Stack size 16 bytes, system_stm32f4xx.o(.text), UNUSED)
 
 <P><STRONG><a name="[9e]"></a>__use_two_region_memory</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
 
@@ -689,7 +689,7 @@ Global Symbols
 <H3>
 Local Symbols
 </H3>
-<P><STRONG><a name="[77]"></a>SetSysClock</STRONG> (Thumb, 218 bytes, Stack size 12 bytes, system_stm32f4xx.o(.text))
+<P><STRONG><a name="[7a]"></a>SetSysClock</STRONG> (Thumb, 218 bytes, Stack size 12 bytes, system_stm32f4xx.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = SetSysClock
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemInit
